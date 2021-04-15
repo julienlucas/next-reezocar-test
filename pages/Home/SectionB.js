@@ -273,7 +273,7 @@ export default function SectionB({ cars }) {
       color: state.isSelected ? 'white' : '#494949',
       cursor: 'pointer'
     }),
-    singleValue: (provided) => ({
+    singleValue: (provided, state) => ({
       ...provided
     }),
     control: base => ({
