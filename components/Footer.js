@@ -50,7 +50,7 @@ const Footer = () => {
   const theme = useContext(ThemeContext)
 
   return (
-    <FooterComp theme={theme}>
+    typeof window !== 'undefined' && <FooterComp theme={theme}>
       <div className="container">
         <div className="row">
           <div className="col col-1">

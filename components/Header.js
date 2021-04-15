@@ -101,7 +101,7 @@ const Hero = styled.div`
 
 const NavComp = () => {
   return (
-    <Nav>
+    typeof window !== 'undefined' && <Nav>
       <div className="container">
         <Image
           className="logo"

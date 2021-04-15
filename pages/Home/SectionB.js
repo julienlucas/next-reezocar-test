@@ -151,7 +151,7 @@ const Filters = styled.div`
 
 function Card({ car }) {
   return (
-    <div className="item">
+    typeof window !== 'undefined' && <div className="item">
       <Image
         className="logo"
         src={car.picture ? car.picture : null}
