@@ -1,56 +1,11 @@
-import React, { useContext } from 'react'
-import styled, { ThemeContext } from 'styled-components'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-
-const FooterComp = styled.footer`
-  padding: 47px 0 67px;
-  background: ${props => props.theme.grey150};
-  .row {
-    margin: 70px 0;
-    display: flex;
-  }
-  .col {
-    flex-grow: 4;
-  }
-  .gutter {
-	  flex-grow: 1;
-    width: 10px;
-  }
-  .logo {
-    cursor: pointer;
-  }
-  ul {
-    padding: 0;
-    margin: 0;
-    li {
-      margin-bottom: 40px;
-      list-style: none;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: underline;
-      color: ${props => props.theme.grey100};
-      a {
-        cursor: pointer;
-        &:hover {
-          color: ${props => props.theme.black};
-        }
-      }
-      &:nth-of-type(1) {
-        text-decoration: none;
-        font-weight: 800;
-        font-size: 16px;
-        color: ${props => props.theme.black};
-      }
-    }
-  }
-`;
+import { FooterComp } from '../styles/base/footer-style'
 
 const Footer = () => {
-  const theme = useContext(ThemeContext)
-
   return (
-    <FooterComp theme={theme}>
+    <FooterComp>
       <div className="container">
         <div className="row">
           <div className="col col-1">
