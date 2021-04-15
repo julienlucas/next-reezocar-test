@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import SectionA from './Home/SectionA'
 import SectionB from './Home/SectionB'
 import { getCarsData } from '../lib/cars'
