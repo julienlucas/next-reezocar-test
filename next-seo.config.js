@@ -12,7 +12,7 @@ const SEO = {
     description,
     images: [
       {
-        url: '/images/header-home.png',
+        url: 'https://assets.reezocar.com/statics/img/leaderboard-home-H500.jpg',
         width: 900,
         height: 800,
         alt: 'Og Image Alt Second',
