@@ -17,5 +17,8 @@
     "react-slick": "^0.28.1",
     "sass": "^1.32.8",
     "styled-components": "^5.2.3"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^3.1.0"
   }
 }
