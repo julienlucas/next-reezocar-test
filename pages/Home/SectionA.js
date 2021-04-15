@@ -70,7 +70,7 @@ const Section = styled.section`
   }
 `
 
-function Card({ item }) {
+function Card() {
   return (
     <div className="item">
       <p>“En déposant mon annonce sur Annonces-auto.meilleure-reprise.com j’ai pu vendre ma voiture d’occasion rapidement et sans risques “</p>
