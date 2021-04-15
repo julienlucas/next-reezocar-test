@@ -3,6 +3,47 @@ import Slider from 'react-slick'
 import Image from 'next/image'
 import { SectionAComp } from '../../styles/pages/home-style'
 
+export default function SectionA() {
+  const settings = {
+    className: 'testimonials-slider',
+    centerMode: false,
+    adaptiveHeight: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    infinite: true,
+    variableWidth: false,
+    nextArrow: <NewxShadow />,
+    prevArrow: <PrevShadow />,
+    responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: false,
+          variableWidth: true
+        }
+      }
+    ]
+  }
+
+  return (
+    <SectionAComp>
+      <div className="container">
+        <h2>Avis clients</h2>
+        <Slider {...settings}>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </Slider>
+      </div>
+    </SectionAComp>
+  )
+}
+
 function Card() {
   return (
     <div className="item">
@@ -47,46 +88,5 @@ function PrevShadow(props) {
     >
       <img alt="" />
     </div>
-  )
-}
-
-export default function SectionA() {
-  const settings = {
-    className: 'testimonials-slider',
-    centerMode: false,
-    adaptiveHeight: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    focusOnSelect: true,
-    infinite: true,
-    variableWidth: false,
-    nextArrow: <NewxShadow />,
-    prevArrow: <PrevShadow />,
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: false,
-          variableWidth: true
-        }
-      }
-    ]
-  }
-
-  return (
-    <SectionAComp>
-      <div className="container">
-        <h2>Avis clients</h2>
-        <Slider {...settings}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </Slider>
-      </div>
-    </SectionAComp>
   )
 }
