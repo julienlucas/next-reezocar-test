@@ -151,15 +151,15 @@ const Filters = styled.div`
 
 function Card({ car }) {
   return (
-    typeof window !== 'undefined' && <div className="item">
-      <Image
+    <div className="item">
+      {/* <Image
         className="logo"
         src={car.picture ? car.picture : null}
         alt="meilleur-reprise"
         width={216}
         height={132}
         layout="responsive"
-      />
+      /> */}
       <div className="box">
         <strong>{car.name}</strong>
         <p>{car.description}</p>

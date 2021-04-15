@@ -50,7 +50,7 @@ const Footer = () => {
   const theme = useContext(ThemeContext)
 
   return (
-    typeof window !== 'undefined' && <FooterComp theme={theme}>
+    <FooterComp theme={theme}>
       <div className="container">
         <div className="row">
           <div className="col col-1">
@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <Link href="/acheter">
+        {/* <Link href="/acheter">
           <Image
             className="logo"
             src="/images/MeilleureReprise-logo.png"
@@ -100,7 +100,7 @@ const Footer = () => {
             width={98}
             height={40}
           />
-        </Link>
+        </Link> */}
       </div>
     </FooterComp>
   )

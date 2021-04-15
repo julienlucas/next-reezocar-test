@@ -72,20 +72,20 @@ const Section = styled.section`
 
 function Card() {
   return (
-    typeof window !== 'undefined' && <div className="item">
+    <div className="item">
       <p>“En déposant mon annonce sur Annonces-auto.meilleure-reprise.com j’ai pu vendre ma voiture d’occasion rapidement et sans risques “</p>
       <div>
         <div>
           <strong>Florence</strong>
           <p>Directrice de sex-shop</p>
         </div>
-        <Image
+        {/* <Image
           className="logo"
           src="/images/florence.png"
           alt="meilleur-reprise"
           width={36}
           height={36}
-        />
+        /> */}
       </div>
     </div>
   )
