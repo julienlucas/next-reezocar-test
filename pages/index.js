@@ -12,7 +12,7 @@ export default function Home({ allCarsData }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const carsData = await getCarsData()
   return {
     props: {
