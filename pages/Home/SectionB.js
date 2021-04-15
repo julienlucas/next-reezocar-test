@@ -165,6 +165,7 @@ export default function SectionB({ cars }) {
           </div>
           <div className="col col-right">
             <Select
+              instanceId={String}
               placeholder="Les modèles les plus vus"
               options={options}
               styles={customStyles}

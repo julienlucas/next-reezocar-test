@@ -47,14 +47,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <Link href="/acheter">
-          <Image
-            className="logo"
-            src="/images/MeilleureReprise-logo.png"
-            alt="meilleur-reprise"
-            width={98}
-            height={40}
-          />
+        <Link href="/">
+          <a>
+            <Image
+              className="logo"
+              src="/images/MeilleureReprise-logo.png"
+              alt="meilleur-reprise"
+              width={98}
+              height={40}
+            />
+          </a>
         </Link>
       </div>
     </FooterComp>
