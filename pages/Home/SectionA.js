@@ -150,10 +150,10 @@ export default function SectionA() {
       <div className="container">
         <h2>Avis clients</h2>
         <Slider {...settings}>
-          <Card key />
-          <Card key />
-          <Card key />
-          <Card key />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </Slider>
       </div>
     </Section>

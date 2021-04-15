@@ -321,8 +321,8 @@ export default function SectionB({ cars }) {
       </div>
 
       <Slider {...settings}>
-        {cars.map((car) => (
-          <Card car={car} key />
+        {cars && cars.map((car, i) => (
+          <Card car={car} key={i} />
         ))}
       </Slider>
 
