@@ -79,13 +79,13 @@ function Card() {
           <strong>Florence</strong>
           <p>Directrice de sex-shop</p>
         </div>
-        {/* <Image
+        <Image
           className="logo"
           src="/images/florence.png"
           alt="meilleur-reprise"
           width={36}
           height={36}
-        /> */}
+        />
       </div>
     </div>
   )

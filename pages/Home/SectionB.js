@@ -149,22 +149,17 @@ const Filters = styled.div`
   }
 `
 
-const myLoader = ({ src }) => {
-  return `${src}`;
-}
-
 function Card({ car }) {
   return (
     <div className="item">
-      {/* <Image
+      <Image
         className="logo"
         src={car.picture ? car.picture : null}
         alt="meilleur-reprise"
         width={216}
         height={132}
         layout="responsive"
-        loader={myLoader}
-      /> */}
+      />
       <div className="box">
         <strong>{car.name}</strong>
         <p>{car.description}</p>
@@ -182,13 +177,13 @@ function NextShadow(props) {
       className="next-shadow"
       onClick={onClick}
     >
-      {/* <Image
+      <Image
         className="icon"
         src="/icons/down-chevron.svg"
         width={25}
         height={25}
         layout="fixed"
-      /> */}
+      />
     </div>
   )
 }
@@ -201,13 +196,13 @@ function PrevShadow(props) {
       className="prev-shadow"
       onClick={onClick}
     >
-      {/* <Image
+      <Image
         className="icon"
         src="/icons/down-chevron.svg"
         width={25}
         height={25}
         layout="fixed"
-      /> */}
+      />
     </div>
   )
 }
@@ -297,16 +292,13 @@ export default function SectionB({ cars }) {
   }
 
   const IndicatorSeparator = () => {
-    return (
-      <div/>
-    )
-    // <Image
-    //   className="icon"
-    //   src="/icons/down-chevron.svg"
-    //   width={40}
-    //   height={20}
-    //   layout="fixed"
-    // />
+    return <Image
+      className="icon"
+      src="/icons/down-chevron.svg"
+      width={40}
+      height={20}
+      layout="fixed"
+    />
   };
 
   return (

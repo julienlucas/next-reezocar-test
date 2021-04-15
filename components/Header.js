@@ -103,13 +103,13 @@ const NavComp = () => {
   return (
     <Nav>
       <div className="container">
-        {/* <Image
+        <Image
           className="logo"
           src="/images/MeilleureReprise-logo.png"
           alt="meilleur-reprise"
           width={98}
           height={40}
-        /> */}
+        />
 
         <button className="btn btn-secondary">Vendre ma voiture</button>
 
