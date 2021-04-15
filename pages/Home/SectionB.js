@@ -331,21 +331,21 @@ export default function SectionB({ cars }) {
           <div className="col col-left">
             <strong>Par ville</strong>
             <ul>
-              {menuVilles.map(ville => <li className={menusSelected.villes === ville ? 'active' : null} onClick={(e) => setMenusSelected({ ... menusSelected, villes : ville})}>{ville}</li>)}
+              {menuVilles.map(ville => <li key={ville} className={menusSelected.villes === ville ? 'active' : null} onClick={(e) => setMenusSelected({ ... menusSelected, villes : ville})}>{ville}</li>)}
             </ul>
             <strong>Par département</strong>
             <ul>
-              {menuDépartements.map(departement => <li className={menusSelected.departements === departement ? 'active' : null} onClick={(e) => setMenusSelected({ ... menusSelected, departements : departement})}>{departement}</li>)}
+              {menuDépartements.map(departement => <li key={departement} className={menusSelected.departements === departement ? 'active' : null} onClick={(e) => setMenusSelected({ ... menusSelected, departements : departement})}>{departement}</li>)}
             </ul>
           </div>
            <div className="col col-right">
             <strong>Par type de véhicule</strong>
             <ul>
-              {menuVehicules.map(vehicule => <li className={menusSelected.vehicules === vehicule ? 'active' : null} onClick={(e) => setMenusSelected({ ... menusSelected, vehicules : vehicule})}>{vehicule}</li>)}
+              {menuVehicules.map(vehicule => <li key={vehicule} className={menusSelected.vehicules === vehicule ? 'active' : null} onClick={(e) => setMenusSelected({ ... menusSelected, vehicules : vehicule})}>{vehicule}</li>)}
             </ul>
             <strong>Par marque</strong>
             <ul>
-              {menuMarques.map(marque => <li className={menusSelected.marques === marque ? 'active' : null} onClick={(e) => setMenusSelected({ ... menusSelected, marques : marque})}>{marque}</li>)}
+              {menuMarques.map(marque => <li key={marque} className={menusSelected.marques === marque ? 'active' : null} onClick={(e) => setMenusSelected({ ... menusSelected, marques : marque})}>{marque}</li>)}
             </ul>
           </div>
         </Filters>
