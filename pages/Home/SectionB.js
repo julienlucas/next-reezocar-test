@@ -62,7 +62,7 @@ function PrevShadow(props) {
   )
 }
 
-export default function SectionB({ cars }) {
+export default function SectionB({ carsData }) {
   const [menuVilles] = useState([
     'Marseille (+300)',
     'Paris (+700)',
@@ -176,7 +176,7 @@ export default function SectionB({ cars }) {
       </div>
 
       <Slider {...settings}>
-        {cars && cars.map((car, i) => (
+        {carsData && carsData.map((car, i) => (
           <Card car={car} key={i} />
         ))}
       </Slider>

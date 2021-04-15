@@ -7,7 +7,7 @@ export default function Home({ allCarsData }) {
   return (
     <Layout home>
       <SectionA/>
-      <SectionB cars={allCarsData} />
+      <SectionB carsData={allCarsData} />
     </Layout>
   )
 }
