@@ -23,7 +23,7 @@ export const SectionAComp = styled.section`
       top: 95px;
       appearance: none;
       cursor: pointer;
-      z-index: 5;
+      z-index: 0;
       transition: all 0.5s ease;
       filter: drop-shadow(-3px 4px 4px rgba(5, 102, 141, 0.1));
       &:hover {
@@ -166,10 +166,10 @@ export const SectionBComp = styled.section`
       height: 64px;
       border-radius: 50%;
       background: white;
-      top: 130px;
+      top: 120px;
       appearance: none;
       cursor: pointer;
-      z-index: 5;
+      z-index: 0;
       transition: all 0.5s ease;
       filter: drop-shadow(-3px 4px 4px rgba(5, 102, 141, 0.1));
       &:hover {
@@ -182,7 +182,7 @@ export const SectionBComp = styled.section`
       }
     }
     .next-shadow {
-      right: calc(50% - 590px);
+      right: calc(50% - 640px);
       div {
         transform: rotate(-90deg);
       }
@@ -195,14 +195,13 @@ export const SectionBComp = styled.section`
       }
     }
     .slick-slide {
-      height: 380px;
-      width: 260px;
+      height: 330px;
+      width: 240px;
     }
     .item {
-      height: 320px;
-      width: 240px;
-      margin-bottom: 190px;
-      margin: 0 20px;
+      height: 270px;
+      width: 215px;
+      margin: 0;
       background: white;
       box-shadow: 0px 20px 40px rgba(5, 102, 141, 0.1);
       border-radius: 6px;
@@ -213,20 +212,30 @@ export const SectionBComp = styled.section`
         box-shadow: 0px 25px 45px rgba(5, 102, 141, 0.15);
       }
       .box {
-        padding: 15px 20px;
+        padding: 15px 17px;
       }
       img {
-        height: 162px;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
       }
       p {
+        letter-spacing: -0.05em;
         font-size: 14px;
         line-height: 20px;
+        &.city {
+          margin-top: -12px;
+          margin-bottom: 3px;
+        }
+        &.description {
+          margin-top: 0;
+        }
+      }
+      .name {
+        min-height: 50px;
       }
       strong {
         line-height: 24px;
-        font-size: 16px;
+        font-size: 14px;
         color: black;
       }
     }
@@ -244,7 +253,7 @@ export const SectionBComp = styled.section`
     }
     .cars-slider {
       .slick-slide {
-        width: 255px;
+        width: 235px;
       }
       .item {
         margin: 0 -100px;

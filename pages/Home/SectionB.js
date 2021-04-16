@@ -117,14 +117,15 @@ function Card({ car }) {
     <div className="item">
       <Image
         src={car.picture ? car.picture : null}
-        alt="meilleur-reprise"
-        width={216}
-        height={132}
+        alt={car.name + car.description}
+        width={215}
+        height={120}
         layout="responsive"
       />
       <div className="box">
-        <strong>{car.name}</strong>
-        <p>{car.description}</p>
+        <div className="name"><strong>{car.name}</strong></div>
+        <p className="description">{car.description}</p>
+        <p className="city">{car.city}</p>
         <strong>{car.price}</strong>
       </div>
     </div>

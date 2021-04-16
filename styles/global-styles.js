@@ -35,7 +35,7 @@ export const GlobalStyles = createGlobalStyle`
     .container {
       position: relative;
       margin: 0 auto;
-      max-width: 1180px;
+      max-width: 1250px;
       width: 100%;
       display: table;
       padding: 0 20px;
