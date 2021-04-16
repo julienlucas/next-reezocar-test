@@ -85,7 +85,7 @@ const HeroComp = () => {
               </div>
               <div className="gutter"/>
               <div className="col col-3">
-                <input type="submit" className="btn btn-primary btn-green" value="Rechercher"/>
+                <button className="btn btn-primary btn-green" >Rechercher</button>
               </div>
             </div>
           </form>

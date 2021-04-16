@@ -88,7 +88,11 @@ export const Hero = styled.div`
     line-height: 22px;
   }
   .container {
+    position: absolute;
     top: calc(50% - 30px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     transform: translateY(-50%);
     display: flex;
     align-items: center;

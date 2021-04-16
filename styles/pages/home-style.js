@@ -5,9 +5,6 @@ export const SectionAComp = styled.section`
   padding: 110px 0 30px;
   background: ${theme.blue50};
   height: 420px;
-  h2 {
-    color: #353535;
-  }
   .testimonials-slider {
     position: absolute;
     margin: 0 auto;
