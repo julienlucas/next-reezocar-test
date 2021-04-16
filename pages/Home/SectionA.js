@@ -12,7 +12,7 @@ export default function SectionA({ testimonialsData }) {
     focusOnSelect: true,
     infinite: true,
     variableWidth: true,
-    nextArrow: <NewxShadow />,
+    nextArrow: <NextShadow />,
     prevArrow: <PrevShadow />
   }
 
@@ -51,7 +51,7 @@ function Card({ testimonial }) {
   )
 }
 
-function NewxShadow({ onClick }) {
+function NextShadow({ onClick }) {
   return (
     <div
       aria-label="Next"

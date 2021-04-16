@@ -144,6 +144,17 @@ export const Hero = styled.div`
   }
   .col-2 {
     margin-top: 25px;
+    &::before {
+      position: absolute;
+      margin-top: 59px;
+      right: 49px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      border: 1px solid ${theme.grey100};
+      content: '';
+      z-index: 9;
+    }
     &::after {
       position: absolute;
       margin-top: 28px;
@@ -182,6 +193,10 @@ export const Hero = styled.div`
     }
     .col-2 {
       margin-top: 0;
+      &::before {
+        margin-top: 63px;
+        right: 309px;
+      }
       &::after {
         margin-top: 32px;
       }
