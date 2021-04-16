@@ -48,6 +48,12 @@ export const SectionAComp = styled.section`
     .slick-slide {
       height: 205px;
       width: 230px;
+      user-select: none;
+      outline: 0;
+      * {
+        outline: 0;
+        user-select: none
+      }
     }
     .item {
       max-width: 213px;
