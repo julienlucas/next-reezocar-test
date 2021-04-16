@@ -197,11 +197,15 @@ export const SectionBComp = styled.section`
     .slick-slide {
       height: 330px;
       width: 240px;
+      * {
+        outline: 0;
+        user-select: none
+      }
     }
     .item {
       height: 270px;
       width: 215px;
-      margin: 0;
+      margin: 0 20px;
       background: white;
       box-shadow: 0px 20px 40px rgba(5, 102, 141, 0.1);
       border-radius: 6px;

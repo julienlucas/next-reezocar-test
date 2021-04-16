@@ -51,8 +51,7 @@ function Card({ testimonial }) {
   )
 }
 
-function NewxShadow(props) {
-  const { onClick } = props;
+function NewxShadow({ onClick }) {
   return (
     <div
       aria-label="Next"
@@ -70,8 +69,7 @@ function NewxShadow(props) {
   )
 }
 
-function PrevShadow(props) {
-  const { onClick } = props;
+function PrevShadow({ onClick }) {
   return (
     <div
       aria-label="Previous"

@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from 'react-slick'
 import Image from 'next/image'
 import Select from 'react-select'
 import { SectionBComp, Filters } from '../../styles/pages/home-style'
 
 export default function SectionB({ carsData }) {
-  const [menuVilles] = useState([
+  const [menuVilles, setMenuVilles] = useState([
     'Marseille (+300)',
     'Paris (+700)',
     'Nancy'
@@ -27,6 +27,16 @@ export default function SectionB({ carsData }) {
     'Mercedes'
   ])
   const [menusSelected, setMenusSelected] = useState({})
+
+  let villes = []
+  useEffect(() => {
+    carsData.map(item => {
+      if (!villes.includes(item.city)) {
+        villes.push(item.city)
+        setMenuVilles(villes.sort((a, b) => a - b))
+      }
+    })
+  }, [carsData])
 
   const settings = {
     className: 'cars-slider',
@@ -54,7 +64,7 @@ export default function SectionB({ carsData }) {
       height={20}
       layout="fixed"
     />
-  };
+  }
 
   return (
     <SectionBComp>
@@ -77,9 +87,10 @@ export default function SectionB({ carsData }) {
       </div>
 
       <Slider {...settings}>
-        {carsData && carsData.map((car, i) =>
-          <Card car={car} key={i} />
-        )}
+        {carsData && carsData
+          .map((car, i) =>
+            <Card car={car} key={i} />
+          )}
       </Slider>
 
       <div className="container">
@@ -105,7 +116,9 @@ export default function SectionB({ carsData }) {
             </ul>
           </div>
         </Filters>
+      </div>
 
+      <div className="container">
         <button className="btn btn-primary">Voir toutes les annonces</button>
       </div>
     </SectionBComp>
@@ -132,8 +145,7 @@ function Card({ car }) {
   )
 }
 
-function NextShadow(props) {
-  const { onClick } = props;
+function NextShadow({ onClick }) {
   return (
     <div
       aria-label="Next"
@@ -151,8 +163,7 @@ function NextShadow(props) {
   )
 }
 
-function PrevShadow(props) {
-  const { onClick } = props;
+function PrevShadow({ onClick }) {
   return (
     <div
       aria-label="Previous"
