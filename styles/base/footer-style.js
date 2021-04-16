@@ -80,6 +80,9 @@ export const FooterComp = styled.footer`
         font-weight: 800;
         font-size: 18px;
         color: ${theme.black};
+        a {
+          cursor: auto
+        }
       }
       &:last-child {
         margin-bottom: 65px;
