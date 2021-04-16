@@ -54,7 +54,7 @@ export const SectionAComp = styled.section`
     }
     .item {
       max-width: 213px;
-      height: 165px;
+      height: 185px;
       margin: 0;
       padding: 10px 20px 50px;
       background: white;
@@ -65,10 +65,11 @@ export const SectionAComp = styled.section`
         border-radius: 50%;
       }
       .box {
+        margin-top: 10px;
         float: right;
         width: 100%;
         div {
-          top: -48px;
+          top: -33px;
         }
       }
       p:first-child {
@@ -99,6 +100,7 @@ export const SectionAComp = styled.section`
         height: auto;
         padding: 25px 32px 70px;
         .box {
+          margin-top: 0;
           div {
             top: -43px;
           }

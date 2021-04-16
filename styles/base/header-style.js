@@ -116,16 +116,24 @@ export const Hero = styled.div`
     user-select: none;
     width: 100%;
     color: ${theme.grey100};
-    &:focus {
+    &.search {
+      background: white url('/icons/search.png') no-repeat;
+      background-position: calc(100% - 20px) 50%;
+    }
+    &.active, &:focus, &:hover {
       border: 1px solid ${theme.black};
       color: ${theme.black};
+      &::placeholder {
+        color: ${theme.black};
+      }
     }
   }
   label {
     width: 100%;
-    display: inlien-block;
+    display: inline-block;
     font-weight: 600;
     font-size: 16px;
+    color: ${theme.black};
   }
   .row {
     margin-top: 50px;
@@ -134,6 +142,15 @@ export const Hero = styled.div`
   }
   .col-2 {
     margin-top: 25px;
+    &::after {
+      position: absolute;
+      margin-top: 28px;
+      margin-left: -65px;
+      width: 1px;
+      height: 33px;
+      background: ${theme.grey100};
+      content: ''
+    }
   }
   @media (min-width: 990px) {
     .container {
@@ -155,14 +172,24 @@ export const Hero = styled.div`
       width: auto;
     }
     .col {
-      flex-grow: 4;
+      min-width: calc(50% - 125px);
+      width: calc(50% - 125px);
+      max-width: calc(50% - 125px);
     }
     .col-2 {
       margin-top: 0;
+      &::after {
+        margin-top: 32px;
+      }
+    }
+    .col-3 {
+      min-width: 230px;
+      width: 230px;
+      max-width: 230px;
     }
     .gutter {
       flex-grow: 1;
-      width: 10px;
+      width: 20px;
     }
   }
 `;

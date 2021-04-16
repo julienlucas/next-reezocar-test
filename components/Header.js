@@ -64,7 +64,8 @@ const HeroComp = () => {
                 <input
                   name="car"
                   type="text"
-                  placeholder="Peugeot 308 Gti"
+                  className={form.car ? 'active' : null}
+                  placeholder="Ex. Peugeot 308 Gti"
                   value={form.car}
                   onChange={onChange}
                 />
@@ -72,8 +73,11 @@ const HeroComp = () => {
               <div className="gutter"/>
               <div className="col col-2">
                 <label>Ville, département</label>
-                <input type="text"
+                <div className="pseudo-element"/>
+                <input
+                  type="text"
                   name="location"
+                  className={`search ${form.location ? 'active' : null}`}
                   placeholder="Ex. Paris (75)"
                   value={form.location}
                   onChange={onChange}

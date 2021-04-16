@@ -44,7 +44,7 @@ export const FooterComp = styled.footer`
       outline: none;
       max-height: 400px;
       &::before {
-        transform: rotate(180deg);
+        transform: matrix(0, -1, 1, 0, 0, 0), rotate(180deg);
       }
     }
     &::before {
