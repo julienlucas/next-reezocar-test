@@ -8,7 +8,8 @@ export const theme = {
   blue150: '#05668D',
   blue100: '#10678B',
   blue50: '#e6f0f4',
-  green100: '#1FC29B'
+  green100: '#1FC29B',
+  green50: '#E6F0F4'
 }
 
 export const GlobalStyles = createGlobalStyle`
@@ -19,6 +20,8 @@ export const GlobalStyles = createGlobalStyle`
       padding: 0;
       margin: 0;
       color: ${theme.black}
+      width: 100vw;
+      overflow-x: hidden;
     }
     * {
       font-family: Montserrat, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -26,6 +29,8 @@ export const GlobalStyles = createGlobalStyle`
         sans-serif;
       box-sizing: border-box;
       transition: all .03s ease-out;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     .container {
       position: relative;
@@ -40,6 +45,7 @@ export const GlobalStyles = createGlobalStyle`
       margin: 0,
       padding: 0,
       font-weight: 700;
+      color: ${theme.black}
     }
     h1 {
       font-size: 32px;
@@ -49,6 +55,10 @@ export const GlobalStyles = createGlobalStyle`
     h2 {
       font-size: 28px;
       line-height: 32px;
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
     }
     p {
       font-size: 20px;
@@ -61,6 +71,9 @@ export const GlobalStyles = createGlobalStyle`
       color: ${theme.black}
     }
     span {
+      &.black {
+        color: ${theme.black}
+      }
       &.blue {
         color: ${theme.blue100}
       }
@@ -92,8 +105,21 @@ export const GlobalStyles = createGlobalStyle`
       color: white;
       background: ${theme.green100};
     }
+    &.btn-third {
+      font-size: 16px;
+      font-weight: 700;
+      padding: 15px 20px;
+      color: white;
+      background: ${theme.green100};
+    }
     &.btn-green {
       background: ${theme.green100};
+    }
+    &.btn-blue {
+      background: ${theme.blue100};
+    }
+    &.btn-black {
+      background: ${theme.black};
     }
     @media (min-width: 990px) {
       .container {
@@ -112,6 +138,10 @@ export const GlobalStyles = createGlobalStyle`
       h2 {
         font-size: 40px;
         line-height: 49px;
+      }
+      h3 {
+        font-size: 18px;
+        line-height: 24px;
       }
     }
   }

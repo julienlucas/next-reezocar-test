@@ -251,6 +251,80 @@ export const SectionBComp = styled.section`
   }
 `
 
+export const SectionCComp = styled.section`
+  padding: 30px 0 40px;
+  background: ${theme.green50};
+  width: 100%;
+  h2, p {
+    text-align: left;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  h3 {
+    margin-top: -5px;
+  }
+  * {
+    text-decoration: none;
+  }
+  img {
+    border-radius: 12px;
+    height: 216px;
+    width: 100%;
+  }
+  p:not(.title):not(.description) {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: ${theme.blue150}
+  }
+  .title, .description {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.7;
+    color: ${theme.black}
+    text-transform: auto;
+  }
+  .title {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .row {
+    margin-top: 30px;
+    display: table;
+    width: 100%;
+  }
+  .col {
+    flex-grow: 4;
+  }
+  .gutter {
+    flex-grow: 1;
+    width: 70px;
+  }
+  .box {
+    height: 100%;
+  }
+  .btn {
+    position: relative;
+    margin-bottom: 35px;
+  }
+  @media (min-width: 640px) {
+    padding: 40px 0 135px;
+    h2, p {
+      text-align: center;
+    }
+    .row {
+      display: flex;
+      margin-top: 50px;
+    }
+    .btn {
+      position: absolute;
+      bottom: -90px;
+    }
+  }
+`
+
 export const Filters = styled.div`
   display: none;
   .col-left, .col-right {

@@ -16,7 +16,7 @@ class MyDocument extends Document {
           <link href="/favicons/favicon-16x16.png" rel="shortcut icon" />
           <link href="/favicons/site.webmanifest" rel="manifest" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@1,700,600,800&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500,600,700,800&display=swap"
             rel="stylesheet"
           />
           <link
