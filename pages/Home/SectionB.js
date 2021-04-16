@@ -32,25 +32,12 @@ export default function SectionB({ carsData }) {
     className: 'cars-slider',
     centerMode: false,
     adaptiveHeight: true,
-    slidesToShow: 8,
     slidesToScroll: 1,
     focusOnSelect: true,
     infinite: true,
-    variableWidth: false,
+    variableWidth: true,
     nextArrow: <NextShadow />,
-    prevArrow: <PrevShadow />,
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: false,
-          variableWidth: true
-        }
-      }
-    ]
+    prevArrow: <PrevShadow />
   }
 
   const mostViewedCars = [
@@ -90,9 +77,9 @@ export default function SectionB({ carsData }) {
       </div>
 
       <Slider {...settings}>
-        {carsData && carsData.map((car, i) => (
+        {carsData && carsData.map((car, i) =>
           <Card car={car} key={i} />
-        ))}
+        )}
       </Slider>
 
       <div className="container">
@@ -129,7 +116,6 @@ function Card({ car }) {
   return (
     <div className="item">
       <Image
-        className="logo"
         src={car.picture ? car.picture : null}
         alt="meilleur-reprise"
         width={216}

@@ -17,6 +17,14 @@ const NavComp = () => {
 
         <button className="btn btn-secondary">Vendre ma voiture</button>
 
+        <div className="mobile-menu">
+          <div className="cross">
+            <span/>
+            <span/>
+            <span/>
+          </div>
+        </div>
+
         <ul>
           <li><Link href="/acheter"><a>Acheter</a></Link></li>
           <li><Link href="/conseils"><a>Conseils</a></Link></li>
@@ -47,7 +55,7 @@ const HeroComp = () => {
     <Hero>
       <div className="container">
         <div>
-          <h1>Concessionnaire en ligne spécialiste<br/> de <span className="blue">l'achat</span> et la <span className="green">vente</span> de voitures d'occasion</h1>
+          <h1>Concessionnaire en ligne spécialiste de <span className="blue">l'achat</span> et la <span className="green">vente</span> de voitures d'occasion</h1>
           <p>Trouver une petite annonce de annonce de voiture d'occasion près de chez vous ou partout en France :</p>
           <form onSubmit={(e) => onSubmit(e)}>
             <div className="row">

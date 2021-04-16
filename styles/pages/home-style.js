@@ -2,44 +2,61 @@ import styled from 'styled-components'
 import { theme } from '../global-styles'
 
 export const SectionAComp = styled.section`
-  padding: 120px 0 30px;
+  padding: 110px 0 30px;
   background: ${theme.blue50};
+  height: 420px;
   h2 {
     color: #353535;
   }
   .testimonials-slider {
-    .slick-prev:hover:before,
-    .slick-prev:focus:before,
-    .slick-next:hover:before,
-    .slick-next:focus:before {
-      display: none;
-    }
+    position: absolute;
+    margin: 0 auto;
+    display: table;
+    width: 1180px;
     .next-shadow,
     .prev-shadow {
       position: absolute;
-      width: 90px;
-      height: 100%;
-      top: 0;
-      -webkit-appearance: none;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: white;
+      top: 95px;
+      appearance: none;
       cursor: pointer;
       z-index: 5;
       transition: all 0.5s ease;
-      display: none;
+      filter: drop-shadow(-3px 4px 4px rgba(5, 102, 141, 0.1));
+      &:hover {
+        background: ${theme.grey50};
+      }
+      div {
+        position: absolute;
+        top: 30%;
+        left: 30%;
+      }
     }
     .next-shadow {
-      right: 0px;
+      left: 1160px;
+      div {
+        transform: rotate(-90deg);
+      }
     }
     .prev-shadow {
-      left: -15px;
+      display: none;
+      left: calc(50% - 620px);
+      div {
+        transform: rotate(90deg);
+      }
     }
     .slick-slide {
-      height: 380px;
+      height: 205px;
+      width: 230px;
     }
     .item {
-      max-width: 380px;
-      margin: 0 10px;
-      margin-bottom: 190px;
-      padding: 25px 32px 70px 32px;
+      max-width: 213px;
+      height: 165px;
+      margin: 0;
+      padding: 10px 20px 50px;
       background: white;
       border-radius: 6px;
       filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.1));
@@ -47,35 +64,72 @@ export const SectionAComp = styled.section`
         margin: 0 0 40px;
         border-radius: 50%;
       }
-      div {
-        left: -17px;
+      .box {
         float: right;
+        width: 100%;
+        div {
+          top: -48px;
+        }
       }
       p:first-child {
-        margin-bottom: 35px;
+        margin-bottom: 0;
       }
       p:not(:first-child), strong {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.5;
         padding: 0;
-        margin: 0;
+        margin: 0 0 0 50px;
       }
       p {
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+  @media (min-width: 990px) {
+    padding: 120px 0 30px;
+    height: 560px;
+    .testimonials-slider {
+      .slick-slide {
+        height: 380px;
+        width: 400px;
+      }
+      .item {
+        max-width: 380px;
+        height: auto;
+        padding: 25px 32px 70px;
+        .box {
+          div {
+            top: -43px;
+          }
+        }
+        p:first-child {
+          margin-bottom: 35px;
+        }
+        p:not(:first-child), strong {
+          font-size: 14px;
+          line-height: 1.8;
+        }
+        p {
+          font-size: 16px;
+          line-height: 26px;
+        }
       }
     }
   }
 `
 
 export const SectionBComp = styled.section`
-  padding: 50px 0 80px;
+  padding: 25px 0 70px;
+  width: 100vw;
+  overflow-x: hidden;
   .col-left {
     float: left;
-    width: 65%;
+    width: 100%;
   }
   .col-right {
     float: right;
+    display: none;
     div {
       max-width: 320px;
     }
@@ -99,20 +153,15 @@ export const SectionBComp = styled.section`
     position: relative;
     margin: 0 auto;
     display: table;
+    width: 100%;
   }
   .cars-slider {
     margin-top: 40px;
-    .slick-prev:hover:before,
-    .slick-prev:focus:before,
-    .slick-next:hover:before,
-    .slick-next:focus:before {
-    }
     .next-shadow,
     .prev-shadow {
       position: absolute;
       width: 64px;
       height: 64px;
-      background: red;
       border-radius: 50%;
       background: white;
       top: 130px;
@@ -145,13 +194,13 @@ export const SectionBComp = styled.section`
     }
     .slick-slide {
       height: 380px;
+      width: 260px;
     }
     .item {
       height: 320px;
-      max-width: 240px;
-      width: 100%;
+      width: 240px;
       margin-bottom: 190px;
-      margin: 0 -100px;
+      margin: 0 20px;
       background: white;
       box-shadow: 0px 20px 40px rgba(5, 102, 141, 0.1);
       border-radius: 6px;
@@ -180,9 +229,30 @@ export const SectionBComp = styled.section`
       }
     }
   }
+  @media (min-width: 990px) {
+    padding: 50px 0 80px;
+    .col-left {
+      width: 65%;
+    }
+    .col-right {
+      display: block;
+    }
+    .btn-primary {
+      width: auto;
+    }
+    .cars-slider {
+      .slick-slide {
+        width: 255px;
+      }
+      .item {
+        margin: 0 -100px;
+      }
+    }
+  }
 `
 
 export const Filters = styled.div`
+  display: none;
   .col-left, .col-right {
     margin-bottom: 68px;
     width: 50%;
@@ -192,7 +262,7 @@ export const Filters = styled.div`
     padding: 0;
     margin: 0 0 15px;
     li {
-      margin-right: 8px;
+      margin: 0 8px 8px 0;
       display: inline-block;
       width: auto;
       padding: 22px 29px;
@@ -209,5 +279,8 @@ export const Filters = styled.div`
         cursor: pointer;
       }
     }
+  }
+  @media (min-width: 990px) {
+    display: block;
   }
 `

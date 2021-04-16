@@ -15,6 +15,7 @@ export const Nav = styled.nav`
     position: relative;
     top: 5px;
     float: right;
+    display: none;
   }
   div:not(.container) {
     position: relative;
@@ -24,6 +25,7 @@ export const Nav = styled.nav`
   }
   ul {
     float: right;
+    display: none;
     li {
       list-style: none;
       display: inline-block;
@@ -38,6 +40,36 @@ export const Nav = styled.nav`
       }
     }
   }
+  .mobile-menu {
+    cursor: pointer;
+    display: block;
+    width: calc(100% - 100px);
+    .cross {
+      float: right;
+      width: 25px; height: 25px;
+      display: block;
+    }
+    span {
+      position: absolute;
+      width: 29px; height: 3px;
+      background: ${theme.black};
+      border-radius: 1px;
+      &:nth-child(1) {top: 0px}
+      &:nth-child(2) {top: 8px}
+      &:nth-child(3) {top: 16px}
+    }
+  }
+  @media (min-width: 990px) {
+    .mobile-menu {
+      display: none;
+    }
+    .btn {
+      display: block;
+    }
+    ul {
+      display: block;
+    }
+  }
 `;
 
 export const Hero = styled.div`
@@ -47,24 +79,35 @@ export const Hero = styled.div`
   height: 660px;
   display: table;
   background: url('/images/header-home.png') no-repeat;
-  background-position: 0 100%;
+  background-position: 70% 100%;
   background-size: cover;
   z-index: 1;
+  p {
+    margin-top: 50px;
+    font-size: 14px;
+    line-height: 22px;
+  }
   .container {
     top: calc(50% - 30px);
     transform: translateY(-50%);
     display: flex;
     align-items: center;
+    div {
+      width: 100%;
+    }
   }
   .btn {
     position: relative;
+    margin: 0 auto;
+    display: table;
     top: 36px;
+    width: 100%;
   }
   input[type="text"] {
     position: relative;
-    margin-top: 16px;
-    padding: 0 24px;
-    font-size: 20px;
+    margin: 12px 0 0 0;
+    padding: 0 17px;
+    font-size: 16px;
     font-weight: 600;
     height: 64px;
     border-radius: 6px;
@@ -86,13 +129,40 @@ export const Hero = styled.div`
   }
   .row {
     margin-top: 50px;
-    display: flex;
+    display: table;
+    width: 100%;
   }
-  .col {
-    flex-grow: 4;
+  .col-2 {
+    margin-top: 25px;
   }
-  .gutter {
-	  flex-grow: 1;
-    width: 10px;
+  @media (min-width: 990px) {
+    .container {
+      div {
+        width: auto;
+      }
+    }
+    p {
+      margin-top: 0;
+      font-size: 20px;
+    }
+    input[type="text"] {
+      margin: 16px 0 0 0;
+      padding: 0 24px;
+      font-size: 20px;
+    }
+    .row {
+      display: flex;
+      width: auto;
+    }
+    .col {
+      flex-grow: 4;
+    }
+    .col-2 {
+      margin-top: 0;
+    }
+    .gutter {
+      flex-grow: 1;
+      width: 10px;
+    }
   }
 `;

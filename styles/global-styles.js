@@ -18,12 +18,12 @@ export const GlobalStyles = createGlobalStyle`
       scroll-behavior: smooth;
       padding: 0;
       margin: 0;
-      font-family: Montserrat, BlinkMacSystemFont, Segoe UI, Roboto,
-        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-        sans-serif;
       color: ${theme.black}
     }
     * {
+      font-family: Montserrat, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
       box-sizing: border-box;
       transition: all .03s ease-out;
     }
@@ -33,6 +33,7 @@ export const GlobalStyles = createGlobalStyle`
       max-width: 1180px;
       width: 100%;
       display: table;
+      padding: 0 20px;
     }
     h1, h2, h3, h4, h5, h6 {
       position: relative;
@@ -41,13 +42,13 @@ export const GlobalStyles = createGlobalStyle`
       font-weight: 700;
     }
     h1 {
-      font-size: 54px;
-      line-height: 80px;
+      font-size: 32px;
+      line-height: 39px;
       letter-spacing: -0.01em;
     }
     h2 {
-      font-size: 40px;
-      line-height: 49px;
+      font-size: 28px;
+      line-height: 32px;
     }
     p {
       font-size: 20px;
@@ -71,6 +72,7 @@ export const GlobalStyles = createGlobalStyle`
       cursor: pointer;
       font-size: 18px;
       font-weight: 800;
+      max-width: 990px;
       width: auto;
       border: 0;
       border-radius: 6px;
@@ -81,7 +83,7 @@ export const GlobalStyles = createGlobalStyle`
       }
     }
     &.btn-primary {
-      padding: 20px 70px;
+      padding: 20px;
       color: white;
       background: ${theme.blue100};
     }
@@ -92,6 +94,25 @@ export const GlobalStyles = createGlobalStyle`
     }
     &.btn-green {
       background: ${theme.green100};
+    }
+    @media (min-width: 990px) {
+      .container {
+        padding: 0 40px;
+      }
+      .btn {
+        &.btn-primary {
+          padding-left: 70px;
+          padding-right: 70px;
+        }
+      }
+      h1 {
+        font-size: 54px;
+        line-height: 80px;
+      }
+      h2 {
+        font-size: 40px;
+        line-height: 49px;
+      }
     }
   }
 `

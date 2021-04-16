@@ -3,30 +3,17 @@ import Slider from 'react-slick'
 import Image from 'next/image'
 import { SectionAComp } from '../../styles/pages/home-style'
 
-export default function SectionA() {
+export default function SectionA({ testimonialsData }) {
   const settings = {
     className: 'testimonials-slider',
     centerMode: false,
     adaptiveHeight: true,
-    slidesToShow: 4,
     slidesToScroll: 1,
     focusOnSelect: true,
     infinite: true,
-    variableWidth: false,
+    variableWidth: true,
     nextArrow: <NewxShadow />,
-    prevArrow: <PrevShadow />,
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: false,
-          variableWidth: true
-        }
-      }
-    ]
+    prevArrow: <PrevShadow />
   }
 
   return (
@@ -34,28 +21,27 @@ export default function SectionA() {
       <div className="container">
         <h2>Avis clients</h2>
         <Slider {...settings}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {testimonialsData && testimonialsData.map((testimonial, i) =>
+            <Card testimonial={testimonial} key={i} />
+          )}
         </Slider>
       </div>
     </SectionAComp>
   )
 }
 
-function Card() {
+function Card({ testimonial }) {
   return (
     <div className="item">
-      <p>“En déposant mon annonce sur Annonces-auto.meilleure-reprise.com j’ai pu vendre ma voiture d’occasion rapidement et sans risques “</p>
-      <div>
+      <p>{testimonial.quote}</p>
+      <div className="box">
         <div>
-          <strong>Florence</strong>
-          <p>Directrice de sex-shop</p>
+          <strong>{testimonial.name}</strong>
+          <p>{testimonial.job}</p>
         </div>
         <Image
           className="logo"
-          src="/images/florence.png"
+          src={testimonial.picture}
           alt="meilleur-reprise"
           width={36}
           height={36}
@@ -73,7 +59,13 @@ function NewxShadow(props) {
       className="next-shadow"
       onClick={onClick}
     >
-      <img alt="" />
+      <Image
+        className="icon"
+        src="/icons/down-chevron.svg"
+        width={25}
+        height={25}
+        layout="fixed"
+      />
     </div>
   )
 }
@@ -86,7 +78,13 @@ function PrevShadow(props) {
       className="prev-shadow"
       onClick={onClick}
     >
-      <img alt="" />
+      <Image
+        className="icon"
+        src="/icons/down-chevron.svg"
+        width={25}
+        height={25}
+        layout="fixed"
+      />
     </div>
   )
 }
