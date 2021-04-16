@@ -102,6 +102,8 @@ export const Hero = styled.div`
     display: table;
     top: 36px;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
   input[type="text"] {
     position: relative;

@@ -24,7 +24,7 @@ export const SectionAComp = styled.section`
       appearance: none;
       cursor: pointer;
       z-index: 0;
-      transition: all 0.5s ease;
+      transition: all .5s ease;
       filter: drop-shadow(-3px 4px 4px rgba(5, 102, 141, 0.1));
       &:hover {
         background: ${theme.grey50};
@@ -197,6 +197,8 @@ export const SectionBComp = styled.section`
     .slick-slide {
       height: 330px;
       width: 240px;
+      user-select: none;
+      outline: 0;
       * {
         outline: 0;
         user-select: none
