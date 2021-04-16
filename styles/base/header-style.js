@@ -76,7 +76,7 @@ export const Hero = styled.div`
   position: relative;
   top: 72px;
   width: 100%;
-  height: 660px;
+  height: 770px;
   display: table;
   background: url('/images/header-home.png') no-repeat;
   background-position: 70% 100%;
@@ -153,7 +153,9 @@ export const Hero = styled.div`
     }
   }
   @media (min-width: 990px) {
+    height: 660px;
     .container {
+      top: calc(50% - 30px);
       div {
         width: auto;
       }
